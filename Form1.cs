@@ -95,6 +95,12 @@ namespace Sokolov_laba_2
             }
             Array.Resize(ref Matr, Matr.Length - 1);
         }
+         void del_elem(ref int[] Mas, int n)
+        {
+            for (int i = n; i < Mas.Length - 1; i++)
+                Mas[i] = Mas[i + 1];
+            Array.Resize(ref Mas, Mas.Length - 1);
+        }
 
         void form_vec_gor(int p)
         {
