@@ -101,6 +101,16 @@ namespace Sokolov_laba_2
                 Mas[i] = Mas[i + 1];
             Array.Resize(ref Mas, Mas.Length - 1);
         }
+         void output()
+        {
+            string result = "C=";
+            for (int i = 1; i < A.Length; i++)
+                if (A[i] != -1 && B[i] != -1)
+                    result += "X" + V[i] + ", ";
+            listBox1.Items.Add(result);
+
+
+        }
 
         void form_vec_gor(int p)
         {
