@@ -84,6 +84,17 @@ namespace Sokolov_laba_2
                 Array.Resize(ref Matr[i], Matr[i].Length - 1);
             }
         }
+        void del_row(int r)
+        {
+            for (int j = 0; j < Matr.Length; j++)
+            {
+                for (int i = r; i < Matr.Length - 1; i++)
+                {
+                    Matr[i][j] = Matr[i + 1][j];
+                }
+            }
+            Array.Resize(ref Matr, Matr.Length - 1);
+        }
 
         void form_vec_gor(int p)
         {
