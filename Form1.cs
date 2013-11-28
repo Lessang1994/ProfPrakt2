@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Sokolov_laba_2
-{
+{55y54y67
     public partial class Form1 : Form
     {
         public Form1()
