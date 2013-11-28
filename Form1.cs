@@ -59,6 +59,20 @@ namespace Sokolov_laba_2
                 cut();
             }
         }
+         void cut()
+        {
+            for (int i = 1; i < A.Length; i++)
+                if (A[i] != -1 && B[i] != -1)
+                {
+                    del_row(i);
+                    del_col(i);
+
+                    del_elem(ref A, i);
+                    del_elem(ref B, i);
+                    del_elem(ref V, i);
+                    i--;
+                }
+        }
 
         void form_vec_gor(int p)
         {
