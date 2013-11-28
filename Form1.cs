@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace Sokolov_laba_2
-{55y54y67
+{
     public partial class Form1 : Form
     {
         public Form1()
@@ -60,64 +60,6 @@ namespace Sokolov_laba_2
             }
         }
 
-        void cut()
-        {
-            for (int i = 1; i < A.Length; i++)
-                if (A[i] != -1 && B[i] != -1)
-                {
-                    del_row(i);
-                    del_col(i);
-
-                    del_elem(ref A, i);
-                    del_elem(ref B, i);
-                    del_elem(ref V, i);
-                    i--;
-                }
-        }
-
-        void del_col(int c)
-        {
-            for (int i = 0; i < Matr.Length; i++)
-            {
-                for (int j = c; j < Matr.Length - 1; j++)
-                {
-                    Matr[i][j] = Matr[i][j + 1];
-                }
-                Array.Resize(ref Matr[i], Matr[i].Length - 1);
-            }
-        }
-
-        void del_row(int r)
-        {
-            for (int j = 0; j < Matr.Length; j++)
-            {
-                for (int i = r; i < Matr.Length - 1; i++)
-                {
-                    Matr[i][j] = Matr[i + 1][j];
-                }
-            }
-            Array.Resize(ref Matr, Matr.Length - 1);
-        }
-
-        void del_elem(ref int[] Mas, int n)
-        {
-            for (int i = n; i < Mas.Length - 1; i++)
-                Mas[i] = Mas[i + 1];
-            Array.Resize(ref Mas, Mas.Length - 1);
-        }
-
-
-
-        void output()
-        {
-            string result = "C=";
-            for (int i = 1; i < A.Length; i++)
-                if (A[i] != -1 && B[i] != -1)
-                    result += "X" + V[i] + ", ";
-            listBox1.Items.Add(result);
-
-
-        }
         void form_vec_gor(int p)
         {
             bool pr;
