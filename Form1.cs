@@ -84,6 +84,7 @@ namespace Sokolov_laba_2
                 Array.Resize(ref Matr[i], Matr[i].Length - 1);
             }
         }
+        // Удаление колонок
         void del_row(int r)
         {
             for (int j = 0; j < Matr.Length; j++)
@@ -111,7 +112,7 @@ namespace Sokolov_laba_2
 
 
         }
-
+// Формирование векторгоризонтального
         void form_vec_gor(int p)
         {
             bool pr;
@@ -142,7 +143,7 @@ namespace Sokolov_laba_2
                 }
         }
 
-
+// Формирование вектора
         void form_vec_vert(int p)
         {
             bool pr;
